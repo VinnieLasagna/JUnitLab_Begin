@@ -38,7 +38,7 @@ public class GiftCardTest {
   }
   
   @Test
-  public String deduct(double) {
+  public void deduct(double amount) {
     
     double balance;
     GiftCard card;
@@ -48,10 +48,10 @@ public class GiftCardTest {
     balance = 100.00;
     card = new GiftCard(issuingStore, balance);
     
-    balance = balance - amount;
+    
     
     assertEquals("deduct()",
-        , card.deduct());
+        "Remaining Balance:  50.00", card.deduct(50));
     
   }
 }
